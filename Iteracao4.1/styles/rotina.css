@@ -1,0 +1,141 @@
+/* Estilos para o grid de imagens */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3);
+  /* 3 colunas */
+  grid-template-rows: repeat(3);
+  /* 3 linhas */
+
+  }
+
+.rotina-button {
+  padding: 10px 20px;
+  background-color: #B99470;
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 80%;
+  top: 85%;
+}
+
+button {
+  /* Other button styles */
+  display: block;
+  margin: 20px auto;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(140, 157, 6, 0.467);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  float: left;
+  margin-left: 70px;
+  margin-top: 28px;
+}
+
+#routineContainer {
+  width: 1030px;
+  height: 500px;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  text-align: center;
+}
+
+.alinhar {
+  width: 1030px;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  text-align: center;
+  font-size: 40px;
+}
+
+.routine-container p {
+  padding: 10px 20px;
+  background-color: #A8896C;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  border: none;
+  border-radius: 5px;
+  display: inline-block; /* Ensures width only takes content space */
+  position: absolute;
+  right: 15%;
+  top: 45%;
+}
+
+
+/* Your modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  top: 20%;
+  left:10%;
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  /* Centraliza o modal horizontalmente */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* Adiciona a barra de rolagem vertical */
+  max-height: 60vh;
+  /* Define a altura máxima do modal */
+  padding-bottom: 70px;
+  /* Espaçamento para acomodar os botões */
+}
+
+.saveButton {
+  position: fixed;
+  bottom: 10px;
+  /* Ajusta o botão para acompanhar o scroll */
+  left:55%;
+  bottom: 17%;
+}
+
+.close {
+  position: fixed;
+  top: 23%;
+  /* Posiciona o botão a 20px do topo */
+  right: 26%;
+  /* Posiciona o botão a 20px da direita */
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* CSS for the modal config */
+.modalConfig {
+  display: none; /* Hide the modal by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}

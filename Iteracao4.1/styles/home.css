@@ -1,0 +1,240 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+  background-color: black;
+  background-size: 1280px 720px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.whiteBackground {
+  height: 720px;
+  width: 1280px;
+  background: #FEFAE0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  scroll-behavior: auto;
+  overflow-y: auto;
+}
+
+
+#h1T {
+  font-family: 'Arial';
+  font-size: 45px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  color: #000000;
+  margin-top: 40px;
+  margin-left: 250px;
+}
+
+#h1A {
+  font-family: 'Arial', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  /* Cor castanho claro */
+  margin-top: 40px;
+  margin-left: 250px;
+  background-color: #FEFAE0;
+  /* Fundo branco */
+  padding: 20px;
+  /* Espaçamento interno para o título */
+}
+#h1M{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    color: #000000;
+    margin-top: 50px;
+    margin-right: 380px;
+    
+}
+
+header h1{
+  font-size: 45px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    color: #000000;
+
+
+
+}
+
+
+/*NAVBAR*/
+ul {
+  background-color: #A9B388;
+  position: fixed;
+  height: 720px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 130%;
+  font-weight: bold;
+  font-family: sans-serif;
+  list-style-type: none;
+
+}
+
+li a {
+  display: flex;
+  color: #000;
+  padding: 20px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li a.active {
+  background-color: #5F6F52;
+  color: black;
+}
+
+li a:hover:not(.active) {
+  background-color: #748E63;
+  color: black;
+}
+
+/* STICKERS */
+h2 {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+p {
+  padding: 2%;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.stickerNoteul,
+.stickerNoteli {
+  list-style: none;
+}
+
+.stickerNoteul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stickerNoteul,
+.stickerNoteli a {
+  display: flex;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #000;
+  background: #E6E696;
+  right: 100%;
+  height: 40%;
+  width: 20%;
+  padding: 1%;
+  left: 760px;
+  top: 40%;
+}
+
+.stickerNoteul,
+.stickerNoteli {
+  margin: 1em;
+}
+
+/*DIVISÕES DA CASA */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-73 {
+  position: relative;
+  top: -25px;
+  left: 450px;
+  margin: 10px;
+  appearance: none;
+  background-color: #FFFFFF;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+/*DIVISOES DA CASA BOTOES */
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Neucha';
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* TEMPERATURA */

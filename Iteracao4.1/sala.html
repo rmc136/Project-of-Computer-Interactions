@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+
+  <!-- Metadados e títulos -->
+  <title>Sala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap e estilos personalizados -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Arquivo CSS personalizado -->
+  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/divisoes.css">
+  <link rel="stylesheet" href="./styles/sala.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+
+<body>
+  <!-- Conteúdo principal -->
+  <div class="backgroundSala">
+    <!-- Cabeçalho -->
+    <header>
+      <ul>
+        <h1 id="h1">LifeEase</h1>
+        <nav>
+          <!-- Links de navegação -->
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./divisoes.html" class="active">Divisões</a></li>
+          <li><a href="./rotina.html">Rotina</a></li>
+          <li><a href="./sobre.html">Ajuda</a></li>
+        </nav>
+      </ul>
+    </header>
+  <h2>Sala</h2>
+  <div class="botoes-sala">
+          <a href="divisoes.html"><button id="voltarDivisoes">Voltar</button></a>
+    <div class="botoes-sala-row">
+      <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#modalAC"><span
+          id="acStatusText">AC</span></button>
+      <button>Televisão</button>
+      <a><button>Lâmpada</button></a>
+    </div>
+    <div class="botoes-sala-row">
+
+      <a><button>Colunas</button></a>
+      <a><button>Estores</button></a>
+      <a><button>Leitor de DVD</button></a>
+    </div>
+  </div>
+
+          
+  <!-- Modal para AC -->
+  <div class="modal fade" id="modalAC" tabindex="-1" role="dialog" aria-labelledby="modalACLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- Cabeçalho do modal AC -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalACLabel">Controle do AC</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Conteúdo do modal AC -->
+          <!-- Botões, sliders e elementos de controle do ar-condicionado -->
+          <button id="toggleButton">ON</button>
+          <div class="definitions">
+            <p class="onVis">Temperatura: <span id="temperatureValue">15</span></p>
+            <div class="range-control">
+              <button class="control-button" id="decreaseTemperature">-</button>
+              <input type="range" class="onVis" id="temperatureSlider" min="15" max="30" step="1">
+              <button class="control-button" id="increaseTemperature">+</button>
+            </div>
+
+            <p class="onVis">Velocidade: <span id="speedValue">1</span> </p>
+            <div class="range-control">
+              <button class="control-button" id="decreaseSpeed">-</button>
+              <input type="range" class="onVis" id="speedSlider" min="1" max="5" step="1">
+              <button class="control-button" id="increaseSpeed">+</button>
+            </div>
+          </div>
+          <!-- Botão para salvar as alterações no canto inferior direito -->
+          <button id="saveChangesButton" class="save-changes-button" disabled>Pronto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal para a TV -->
+  <div class="modal fade" id="modalTV" tabindex="-1" role="dialog" aria-labelledby="modalTVLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <!-- Cabeçalho do modal TV -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTVLabel">Controle da TV</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body tv-modal-content">
+          <!-- Botões para ligar e desligar a TV -->
+          <button id="tvToggleButton" class="off">OFF</button>
+          <div class="definitions">
+            <!-- Seletor de canal da TV -->
+            <select id="channelSelector" class="channel-selector form-control">
+              <option value="1">Canal 1</option>
+              <option value="2">Canal 2</option>
+              <!-- Adicione os demais canais conforme necessário -->
+            </select>
+            <!-- Botão "Pronto" para a TV -->
+            <button id="tvSaveChangesButton" class="save-changes-button" disabled>Pronto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JavaScript e dependências -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="scripts/sala.js"></script>
+</body>
+
+</html>

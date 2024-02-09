@@ -1,0 +1,113 @@
+.buttonsDisp {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+#routineNameInput {
+    margin-top: 3%;
+    margin-left: 40%;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 500px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    position: fixed;
+    top: 23%;
+    /* Posiciona o botão a 20px do topo */
+    right: 26%;
+    /* Posiciona o botão a 20px da direita */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-content-config {
+    position: relative;
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px;
+    max-height: 400px;
+    overflow: auto;
+    padding-bottom: 50px; /* Adjust bottom padding for the button */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #000;
+}
+
+.range-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    /* Adiciona um espaço entre cada controle */
+}
+    
+    
+.control-button {
+    width: 25px;
+    height: 25px;
+    background-color: #A8896C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0 5px;
+    cursor: pointer;
+}
+    
+#temperatureSlider {
+    flex: 1;
+    width: 80px;
+    height: 5px;
+    margin: 0 5px;
+}
+    
+#decreaseTemperature,
+#increaseTemperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#criarRotina {
+    position: fixed;
+    bottom: 3%;
+    right: 34%;
+    background-color: #B99470;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}

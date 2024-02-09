@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+
+#voltar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #B99470;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#voltar:hover {
+  background-color: #A8896C;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 100px;
+}
+
+#imageGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px;
+}
+
+.grid-item {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 0.2fr 0.5fr;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.alimento-image {
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  width: 20px; 
+  height: 20px;
+  margin-right: 5px;
+}
+
+.button {
+  background-color: #A8896C;
+  color: white;
+  padding: 10px 20px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #B99470;
+  text-decoration: #B99470;
+  
+}
+
+.buttonCompra a:hover{
+  text-decoration: none;
+}
+
+.compra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonCompra {
+  background-color: #B99470;
+  color: white;
+  padding: 10px 20px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  display: none;
+  text-decoration: none;
+}
+
+.buttonCompra:hover {
+  background-color: #A8896C;
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+/* Adjusted modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px; /* Reduce the padding for a smaller modal */
+  border: 1px solid #000;
+  max-width: 500px; /* Set the maximum width of the modal */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buy-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #B99470;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #95785a;
+}
+
+/* Styles for payment buttons */
+.payment-btn-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.payment-btn {
+  flex: 1; /* Equal width for buttons */
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #B99470;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.payment-btn.selected {
+  background-color: #95785a;
+}
+
+.payment-fields input[type="text"],
+.payment-fields input[type="password"],
+.payment-fields input[type="date"],
+.payment-fields input[type="email"] {
+  display: block;
+  margin-bottom: 10px; /* Adjust this value to set the desired space */
+}
+
+.error-message p {
+  color: red;
+  font-size: 12px; /* Adjust the font size as needed */
+}
+
+/* CSS para o ícone do carrinho */
+#carrinhoCompras {
+  position: fixed;
+  top: 20px;
+  right: 170px;
+  font-size: 44px;
+  cursor: pointer;
+}
+
+/* CSS para o modal do carrinho */
+.modalCarrinho {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 999;
+  max-width: 300px;
+    /* Ajuste conforme necessário */
+    max-height: 400px;
+    /* Ajuste conforme necessário */
+    overflow-y: auto;
+}
+
+/* Adicione estilos adicionais conforme necessário */

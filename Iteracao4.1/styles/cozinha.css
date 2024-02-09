@@ -1,0 +1,234 @@
+
+  .backgroundCozinha {
+    display: flex;
+    width: 1280px;
+    height: 720px;
+    background-color: #FEFAE0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+
+  .botoes-cozinha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 60px;
+    max-width: 1280px; 
+  }
+
+  .botoes-cozinha-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .botoes-cozinha-row button {
+    background-color: #B99470;
+    width: 200px;
+    height: 100px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    transition: all 0.3s ease;
+
+  }
+
+  .botoes-cozinha-row button:hover {
+    background-color: #a48464;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+
+/* FRIGORIFICO E DISPENSA */
+#voltar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #B99470;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#voltar:hover {
+  background-color: #A8896C;
+}
+
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.421);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  float: left;
+  margin-left: 70px;
+  margin-top: 28px;
+}
+
+.food-img {
+  max-width: 70%;
+
+}
+
+.button {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #B99470;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content p {
+  margin: 10px 0;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background-color: #B99470;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.textAlimentos {
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  font-family: sans-serif;
+  align-items: center;
+  justify-self: center;
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  overflow-y: auto;/
+}
+
+.list-button {
+  padding: 10px 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #B99470;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 36px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+/* The modal para os alimentos (hidden by default) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999; /* Ensure it's above other elements */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+}
+
+/* Modal content */
+.modal-content-alimento {
+  background-color: white;
+  margin: 15% auto; /* Center the modal vertically and horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 400px; /* Max width of the modal */
+  position: relative;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.aliments-container {
+  max-height: 700px; /* Set a max height for the scrollable area */
+  width: 1150px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+.alimento-name {
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}

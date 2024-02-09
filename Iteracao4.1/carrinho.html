@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <title>Carrinho</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Arquivos CSS -->
+  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/divisoes.css">
+  <link rel="stylesheet" href="./styles/listas.css">
+
+  <!-- Bootstrap CSS e Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bibliotecas JavaScript (jQuery, Popper.js, Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- Seu arquivo de script personalizado -->
+  <script src="scripts/cozinha.js"></script>
+</head>
+
+<body>
+  <div class="whiteBackground">
+    
+    <!-- Link para voltar -->
+    <a href="listas.html"><button class="button">Voltar</button></a>
+    <div id="cartItems">
+
+    </div>
+    <button class="button" onclick="showModal()">Comprar</button>
+  </div>
+  <!-- Modal para exibir itens selecionados e processo de pagamento -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Preço Total</h2>
+        <div id="totalPrice">0€</div>
+        <!-- Métodos de pagamento -->
+        <h2>Métodos de Pagamento</h2>
+        <div class="payment-btn-container">
+            <button class="payment-btn" id="payment-btn-credit" onclick="selectPayment('credit')">Cartão de Crédito</button>
+            <button class="payment-btn" id="payment-btn-mbway" onclick="selectPayment('mbway')">MBWay</button>
+            <button class="payment-btn" id="payment-btn-paypal" onclick="selectPayment('paypal')">PayPal</button>
+        </div>
+        <!-- Fields for Card Details -->
+        <div id="creditFields" class="payment-fields" style="display: none;">
+          <input type="text" placeholder="Cartão de Crédito" maxlength="16" required>
+          <input type="date" placeholder="Data de validade" required>
+          <input type="text" placeholder="CVV" maxlength="3" required>
+          <div class="error-message" id="creditErrorMessage"></div>
+        </div>
+        <!-- Field for Phone Number -->
+        <div id="mbwayFields" class="payment-fields" style="display: none;">
+          <input type="text" placeholder="Número de telefone" maxlength="9" pattern="9[0-9]{8}" required>
+          <div class="error-message" id="mbwayErrorMessage"></div>
+        </div>
+        <!-- Fields for PayPal -->
+        <div id="paypalFields" class="payment-fields" style="display: none;">
+          <input type="email" placeholder="PayPal Email" required>
+          <input type="password" placeholder="PayPal Password" required>
+          <div class="error-message" id="paypalErrorMessage"></div>
+        </div>
+        <div class="error-message" id="paymentSelectionError" style="color: red; display: none;">Por favor selecione um método de pagamento.</div>
+        <!-- Botão "Pagar" -->
+        <button onclick="processPayment()">Pagar</button>
+    </div>
+  </div>
+
+
+
+  <!-- Modal para exibir mensagem de pagamento bem sucedido -->
+  <div id="modalSuccess" class="modal">
+    <div class="modal-content">
+      <h2>Pagamento Bem Sucedido</h2>
+      <p>O seu pagamento foi efetuado com sucesso.</p>
+      <!-- Botão "OK" -->
+      <button onclick="closeAllModalsAndRedirect()">OK</button>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,192 @@
+.backgroundSala {
+  display: flex;
+  width: 1280px;
+  height: 720px;
+  background-color: #FEFAE0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.botoes-sala {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Alinhamento à direita */
+  margin-top: 160px;
+  max-width: 400px;
+  /* Defina uma largura máxima para o contêiner dos botões */
+}
+
+.botoes-sala-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.botoes-sala-row button {
+  background-color: #B99470;
+  width: 200px;
+  height: 100px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 25px;
+  margin: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  transition: all 0.3s ease;
+
+}
+
+.botoes-sala-row button:hover {
+  background-color: #a48464;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+  #toggleButton,
+    #tvToggleButton {
+    width: 80px;
+    height: 40px;
+    background-color: #B99470;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  #toggleButton.on {
+    background-color: #F44336;
+  }
+
+  #toggleButton.off {
+    background-color: #4CAF50;
+  }
+
+  
+#tvToggleButton.on {
+  background-color: #4CAF50;
+  /* Verde para o estado ON da TV */
+}
+
+#tvToggleButton.off {
+  background-color: #F44336;
+  /* Vermelho para o estado OFF da TV */
+}
+
+  .onVis {
+    display: none;
+  }
+
+
+
+.save-changes-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #B99470;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.save-changes-button:hover {
+  background-color: #B99470;
+}
+
+.save-changes-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.range-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  /* Adiciona um espaço entre cada controle */
+}
+
+
+.control-button {
+  width: 25px;
+  height: 25px;
+  background-color: #A8896C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#temperatureSlider,
+#speedSlider {
+  flex: 1;
+  width: 80px;
+  height: 5px;
+  margin: 0 5px;
+}
+
+#decreaseTemperature,
+#increaseTemperature,
+#decreaseSpeed,
+#increaseSpeed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title{
+    font-family: sans-serif;
+      font-weight: bold;
+}
+
+.modal-content{
+  height:400px;
+  width:400px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+ .modal-centered {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .tv-modal-content {
+   padding: 20px;
+ }
+
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  /* Cor castanho claro */
+  margin-bottom: 250px;
+  margin-left: 700px;
+  background-color: #FEFAE0;
+  /* Fundo branco */
+  padding: 20px;
+}
